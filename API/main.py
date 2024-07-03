@@ -1,7 +1,8 @@
-from fastapi import FastAPI
 from controller.Controller import Controller
-from controller.UserController import UserController
 from controller.PDFController import PDFController
+from controller.UserController import UserController
+from fastapi import FastAPI
+
 app = FastAPI()
 
 app.include_router(Controller.router)

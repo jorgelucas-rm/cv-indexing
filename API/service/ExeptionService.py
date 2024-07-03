@@ -1,6 +1,7 @@
-from typing import Union
 from enum import Enum
+
 from fastapi import HTTPException
+
 
 class PDFErrorType(Enum):
     FILE_NOT_FOUND = (404, "File Not Found")
@@ -15,7 +16,7 @@ class UserErrorType(Enum):
 
 
 class CustomException(HTTPException):
-    def __init__(self, error_type: any, detail = None):
+    def __init__(self, error_type: any, detail=None):
         self.error_code = error_type.value[0]
         self.error_type = error_type.value[1]
         self.detail = detail or self.error_type
@@ -23,4 +24,3 @@ class CustomException(HTTPException):
 
     def __str__(self):
         return f"{self.error_code} {self.error_type}: {self.detail}"
-    

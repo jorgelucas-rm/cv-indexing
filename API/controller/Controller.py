@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+
 class Controller:
 
     router = APIRouter()
@@ -7,4 +8,3 @@ class Controller:
     @router.get("/")
     def hello_world_root():
         return {"Hello world"}
-    

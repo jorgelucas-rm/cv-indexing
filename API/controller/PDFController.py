@@ -1,6 +1,7 @@
 from fastapi import APIRouter, UploadFile
-from service.PDFCRUDService import PDFCRUDService
 from service.PDFAnalysisService import PDFAnalysisService
+from service.PDFCRUDService import PDFCRUDService
+
 
 class PDFController:
 
@@ -17,7 +18,7 @@ class PDFController:
     @router.delete("/pdf-management/{name}")
     async def delete_pdf(name):
         return PDFCRUDService.delete_pdf(name)
-    
+
     @router.get("/pdf-analysis/{name}")
-    async def delete_pdf(name):
+    async def PDFAnalysis(name):
         return PDFAnalysisService.PDFAnalysis(name)
