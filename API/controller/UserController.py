@@ -5,7 +5,7 @@ from service.UserService import UserService
 
 class UserController:
 
-    router = APIRouter()
+    router = APIRouter(tags=["Users"])
 
     @router.get("/user-management/users")
     async def get_users():

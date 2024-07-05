@@ -3,7 +3,7 @@ from fastapi import APIRouter
 
 class Controller:
 
-    router = APIRouter()
+    router = APIRouter(tags=["Home"])
 
     @router.get("/")
     def hello_world_root():
