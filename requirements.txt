@@ -47,7 +47,8 @@ murmurhash==1.0.10
 mypy-extensions==1.0.0
 nltk==3.8.1
 nodeenv==1.9.1
-numpy==1.26.4
+numpy==1.26.0
+nvidia-nccl-cu12==2.22.3
 orjson==3.10.5
 packaging==24.1
 pathspec==0.12.1
@@ -105,3 +106,4 @@ watchfiles==0.22.0
 weasel==0.4.1
 websockets==12.0
 wrapt==1.16.0
+xgboost==2.1.0
